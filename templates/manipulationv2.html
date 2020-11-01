@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "images" as baseURL %}
+<html lang="en">
+
+<head>
+	<title>Manipulation</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'manipulation/css/stylecards.css' %}">
+	<!--============================================================================================-->
+	<link rel="stylesheet" href="{% static 'manipulation/SubmitButton/style2.css' %}" >
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'manipulation/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'manipulation/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'manipulation/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'manipulation/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'manipulation/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'manipulation/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'manipulation/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'manipulation/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">ID</th>
+								<th class="column2">Name</th>
+								<th class="column3">Year</th>
+								<th class="column4">Contact</th>
+								<th class="column5">Email</th>
+								<th class="column6">Room No</th>
+								<th class="column7">Parent's Name</th>
+								<th class="column8">Parent's Email</th>
+								<th class="column9">Parent's Contact</th>
+							</tr>
+						</thead>
+						<tbody>
+						         {% for studs in stud_list %}
+								<tr>
+									<td class="column1">{{studs.stud_id}}</td>
+									<td class="column3">{{studs.name}}</td>
+									<td class="column4">{{studs.year}}</td>
+									<td class="column5">{{studs.contact}}</td>
+									<td class="column6">{{studs.email}}</td>
+									<td class="column7">{{studs.room}}</td>
+									<td class="column8">{{studs.parents_name}}</td>
+									<td class="column9">{{studs.parents_email}}</td>
+									<td class="column10">{{studs.parents_contact}}</td>
+								</tr>
+								 {% endfor %}
+
+								
+						</tbody>
+					</table>
+				</div>
+				<br>
+				<form action="search" method="POST">
+	  {% csrf_token %}
+	 <input type="text" placeholder="Enter Name" name ="name"><br>
+
+<!-- partial:index.partial.html -->
+	<div id =>
+
+	</div>
+<div id="container">
+  <button class="learn-more" type="submit">
+    <div class="circle">
+      <span class="icon arrow"></span>
+    </div>
+     <p class="button-text" >Submit</p>
+  </button>
+</div>
+
+
+
+  </form>
+
+				{% for message in messages %}
+					<h4> {{message}} </h4>
+					{% endfor %}
+
+<div class="container">
+  <div class="card">
+    <div class="face cover">
+      <div class="content">
+        <img src="https://icon-library.net/images/picture-icon-png/picture-icon-png-26.jpg"></img>
+      <h3>Data Visualization</h3>
+    </div>
+    </div>
+    <div class="face cover2">
+      <div class="content">
+        <p>Monitor the students activity!!<br>
+		Statistics of students going in and out</p>
+        <a href="visualize">Check Out</a>
+      </div>
+    </div>
+  </div>
+</div>
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+
+
+<!--===============================================================================================-->	
+	<script src="{% static 'manipulation/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'manipulation/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'manipulation/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'manipulation/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'manipulation/js/main.js' %}"></script>
+
+</body>
+</html>

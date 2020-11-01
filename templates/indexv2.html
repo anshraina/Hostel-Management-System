@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hostel Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css'>
+<link rel="stylesheet" href="{% static 'HomePage/style.css' %}">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="Head123">
+  <h6 align="center">D.Y.PATIL COLLEGE OF ENGINEERING</h6>
+</div>
+
+
+<div class="col-xs-12">
+    {% if messages %}
+    {% for m in messages %}
+    <!--<div class="" role="alert">-->
+      <!--<center>{{m}}</center>-->
+    <!--</div>-->
+  <script>alert('{{m}}');</script>
+    {% endfor %}
+    {% endif %}
+
+  </div>
+
+<div class="slide-container">
+
+  <div class="wrapper">
+    <div class="clash-card barbarian">
+      <div class="clash-card__image clash-card__image--barbarian">
+        <img src="{% static 'HomePage/images/admission-icon-7.jpg' %}" alt="barbarian" />
+      </div>
+      <!--<div class="clash-card__level clash-card__level&#45;&#45;barbarian">Level 4</div>-->
+      <div class="clash-card__unit-name">
+        <a href="new/register">New Admission</a></div>
+      <div class="clash-card__unit-description">
+
+        Our Hostel is best in Comfort, Study and fun
+        You would feel like home
+      </div>
+
+
+
+    </div> <!-- end clash-card barbarian-->
+  </div> <!-- end wrapper -->
+  
+  <div class="wrapper">
+    <div class="clash-card archer">
+      <div class="clash-card__image clash-card__image--archer">
+        <img src="{% static 'HomePage/images/MONITORING_PROJECT_DATA-512.png' %}" alt="archer" />
+      </div>
+      <div class="clash-card__level clash-card__level--archer">Level 5</div>
+      <div class="clash-card__unit-name">
+        <a href="manipulation/search">Students Records</a></div>
+      <div class="clash-card__unit-description">
+        Wanna fetch students records?!
+
+
+      </div>
+
+
+    </div> <!-- end clash-card archer-->
+  </div> <!-- end wrapper -->
+  
+  <div class="wrapper">
+    <div class="clash-card giant">
+      <div class="clash-card__image clash-card__image--giant">
+        <img src="{% static 'Homepage/images/student-attendance-icon-2.jpg' %}" alt="giant" />
+      </div>
+      <!--<div class="clash-card__level clash-card__level&#45;&#45;giant">Level 5</div>-->
+      <div class="clash-card__unit-name"><a href="inout/entry_exit">In Out</a></div>
+      <div class="clash-card__unit-description">
+        You can bluff security guard but you cant escape from me <br>
+        Here attendence will be taken according to your Id no from Bar Code
+
+      </div>
+
+
+
+    </div> <!-- end clash-card giant-->
+  </div> <!-- end wrapper -->
+</div> <!-- end container -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+<script  src="{% static 'HomePage/script.js' %}"></script>
+
+</body>
+</html>
